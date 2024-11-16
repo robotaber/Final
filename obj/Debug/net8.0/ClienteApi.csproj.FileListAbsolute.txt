@@ -31,3 +31,15 @@ C:\Users\berne\ClienteApi\obj\Debug\net8.0\refint\ClienteApi.dll
 C:\Users\berne\ClienteApi\obj\Debug\net8.0\ClienteApi.pdb
 C:\Users\berne\ClienteApi\obj\Debug\net8.0\ClienteApi.genruntimeconfig.cache
 C:\Users\berne\ClienteApi\obj\Debug\net8.0\ref\ClienteApi.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Npgsql.dll
+C:\Users\berne\ClienteApi\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\berne\ClienteApi\obj\Debug\net8.0\ClienteApi.sourcelink.json

@@ -1,17 +1,26 @@
+// Models/InformacionCliente.cs
+using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace ClienteApi.Models
 {
     public class InformacionCliente
     {
         public int Id { get; set; }
-        public int ClienteId { get; set; }
-        public string TipoInformacion { get; set; } // Ej. Dirección, contactabilidad, etc.
+
+        [Required]
+        public string TipoInformacion { get; set; }
+
+        [Required]
         public string Valor { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public DateTime FechaActualizacion { get; set; }
+
+        [Required]
         public string UsuarioCreador { get; set; }
+
+        [Required]
         public string EstadoInformacion { get; set; }
 
-        // Relación con Cliente
-        public Cliente Cliente { get; set; }
+        // Si el Cliente puede ser nulo, puedes ponerlo como nullable
+        public Cliente? Cliente { get; set; }
     }
 }
