@@ -9,7 +9,7 @@ namespace ClienteApi.Models
     {
         public int Id { get; set; }
 
-        [Required] // Indica que esta propiedad es obligatoria
+        [Required]
         public string Nombres { get; set; }
 
         [Required]
@@ -21,7 +21,10 @@ namespace ClienteApi.Models
         [Required]
         public string Estado { get; set; }
 
-        // Si Informaciones puede ser opcional, puedes permitir null
-        public List<InformacionCliente>? Informaciones { get; set; } 
+        // Nueva propiedad para Fecha de nacimiento
+        [Required]
+        public DateTime FechaNacimiento { get; set; } // Asegúrate de agregar esta propiedad
+
+        public List<InformacionCliente> Informaciones { get; set; }
     }
 }

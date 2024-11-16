@@ -1,7 +1,9 @@
+// Controllers/ClientesController.cs
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using ClienteApi.Data;
 using ClienteApi.Models;
+using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace ClienteApi.Controllers
 {
@@ -9,29 +11,18 @@ namespace ClienteApi.Controllers
     [ApiController]
     public class ClientesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private static List<Cliente> _clientes = new List<Cliente>();
 
-        public ClientesController(AppDbContext context)
-        {
-            _context = context;
-        }
-
-        // GET: api/Clientes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Cliente>>> GetClientes()
+        public ActionResult<IEnumerable<Cliente>> GetClientes()
         {
-            return await _context.Clientes
-                .OrderBy(c => c.Apellidos)
-                .ThenBy(c => c.FechaNacimiento)
-                .ToListAsync();
+            return Ok(_clientes.OrderBy(c => c.FechaNacimiento)); // Asegúrate de que aquí estés usando FechaNacimiento
         }
 
-        // POST: api/Clientes
         [HttpPost]
-        public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
+        public ActionResult CrearCliente([FromBody] Cliente cliente)
         {
-            _context.Clientes.Add(cliente);
-            await _context.SaveChangesAsync();
+            _clientes.Add(cliente);
             return CreatedAtAction(nameof(GetClientes), new { id = cliente.Id }, cliente);
         }
     }
